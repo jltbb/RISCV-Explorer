@@ -46,7 +46,7 @@ class Instruction:
     def extract_rs2(self):
         # Extract the RS1 bits [24-20) from the instruction word
         if self.type != 'I-type':
-            self.rs2 = self.sanitized_str[-23:-20]
+            self.rs2 = self.sanitized_str[-25:-20]
         else:
             # Given that we have an I-type instruction
             # We do not have any RS2 bits.
