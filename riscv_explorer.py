@@ -156,8 +156,9 @@ class Instruction:
             # We should use two's complement for values like imm
             # However we don't want to use it for the user input.
             # Check here for that
-            if binary_str[0] == '1' and len(binary_str) != 32: 
-                max_num = 2 ** len(binary_str)
+            max_num = 2 ** len(binary_str)
+            print((2 ** len(binary_str)-1))
+            if binary_str[0] == '1' and int(binary_str, 2) > 2 ** (len(binary_str)-1) and len(binary_str) != 32:
                 return int(binary_str, 2) - max_num
             else:
                 # Convert binary string to decimal integer
