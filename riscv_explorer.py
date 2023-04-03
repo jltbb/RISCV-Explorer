@@ -157,7 +157,6 @@ class Instruction:
             # However we don't want to use it for the user input.
             # Check here for that
             max_num = 2 ** len(binary_str)
-            print((2 ** len(binary_str)-1))
             if binary_str[0] == '1' and int(binary_str, 2) > 2 ** (len(binary_str)-1) and len(binary_str) != 32:
                 return int(binary_str, 2) - max_num
             else:
